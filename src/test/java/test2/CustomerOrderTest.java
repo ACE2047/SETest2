@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class CustomerOrderTest {
 
-	private CustomerOrder order;
+    private CustomerOrder order;
     private Inventory inventory;
 
     @Before
@@ -64,9 +64,13 @@ public class CustomerOrderTest {
         assertTrue(inventory.isLowStock("Garlic Bread"));
     }
 
+    // TODO: Test order status updates
+    // Set the status of the order and verify that the status is updated correctly.
 
-    // ToDo: Test order status updates
-	// Set the status of the order and verify that the status is updated correctly.
-
-
+    @Test
+    public void testOrderStatusUpdate() {
+        order.addItem("Cheese Pizza", 10.00);
+        order.setStatus("Ready");
+        assertEquals("Ready", order.getStatus());
+    }
 }
