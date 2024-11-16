@@ -56,7 +56,6 @@ public class CustomerOrderTest {
     }
 
 
-
     // ToDo: Test low stock alert
 	// Reduce the stock of an item and verify that the system triggers a low stock alert when the quantity falls below the threshold.
 
